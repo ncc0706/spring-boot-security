@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" th:href="@{/vendor/foundation/css/foundation.css}" type="text/css"/>
+
+    <style>
+
+        .log-in-form {
+            border: 1px solid #cacaca;
+            padding: 1rem;
+            border-radius: 0;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<form class="log-in-form" th:action="@{/login}" method="post">
+    <h4 class="text-center">Log in with you email account</h4>
+    <label>Email
+        <input type="text" name="username" placeholder="somebody@example.com"/>
+    </label>
+    <label>Password
+        <input type="password" name="password" placeholder="Password"/>
+    </label>
+    <input id="show-password" type="checkbox"/><label for="show-password">Show password</label>
+    <p><input type="submit" class="button expanded" value="Sign in"/></p>
+    <p class="text-center"><a href="javascript:void(0);">Forgot your password?</a></p>
+</form>
+
+<script type="text/javascript" th:src="@{/vendor/jquery/jquery.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/foundation/js/foundation.js}"></script>
+</body>
+</html>
