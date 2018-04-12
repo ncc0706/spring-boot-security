@@ -34,7 +34,8 @@ public class AccountController {
             logger.debug("......signin......");
         }
         // 注意返回的路径不要在account前面添加/，否则会执行两遍, 又可以了....无语
-        return "/account/signin";
+        // 又一发现 java -jar 运行会找不到模板
+        return "account/signin";
     }
 
 
